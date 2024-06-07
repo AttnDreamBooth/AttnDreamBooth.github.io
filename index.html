@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="AttnDreamBooth creates novel images of a certain concept from a small dataset">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Textual Inversion, DreamBooth, Attention, AttnDreamBooth">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AttnDreamBooth</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" -->
+  <!-- rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AttnDreamBooth: Towards Text-Aligned Personalized Text-to-Image Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Lianyu Pang<sup>1</sup>,</span>
+              <span class="author-block">
+                Jian Yin<sup>1</sup>,</span>
+                <span class="author-block">
+                  Baoquan Zhao<sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Feize Wu<sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Fu Lee Wang<sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  Qing Li<sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  Xudong Mao<sup>1,*</sup>
+                </span>
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <sup>1</sup>Sun Yat-sen University,
+                    <sup>2</sup>Hong Kong Metropolitan University<br>
+                    <sup>3</sup>The Hong Kong Polytechnic University
+                  </span>
+                  <span class="eql-cntrb"><small><br><sup>*</sup>  Corresponding author</small></span>
+                </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                        <!-- Arxiv PDF link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Supplementary PDF link -->
+                  <!-- <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1lLrG95EH3pmwlYkKBRJ_q3mZtI7I1QOo?usp=sharing" target="_blank" 
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="vertical-align: middle; font-size: 20px;">🤗</span>
+                    <span style="vertical-align: middle;">Dataset</span>
+                </a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png"/>
+      <!-- <h2 class="subtitle has-text-centered">
+        Our method enables text-aligned text-to-image personalization with complex prompts. 
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in text-to-image models have enabled high-quality personalized image synthesis of user-provided concepts with flexible textual control. In this work, we analyze the limitations of two primary techniques in text-to-image personalization: Textual Inversion and DreamBooth. When integrating the learned concept into new prompts, Textual Inversion tends to overfit the concept, while DreamBooth often overlooks it. We attribute these issues to the incorrect learning of the embedding alignment for the concept. We introduce AttnDreamBooth, a novel approach that addresses these issues by separately learning the embedding alignment, the attention map, and the subject identity in different training stages. We also introduce a cross-attention map regularization term to enhance the learning of the attention map. Our method demonstrates significant improvements in identity preservation and text alignment compared to the baseline methods. Code will be made publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Results</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+       <!-- <div class="item"> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/teapot.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/bird.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/can.png"/>
+        <!-- </div> -->
+        <!-- Your image here -->
+        <img src="static/images/cat_toy.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/clock.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/furby.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/teddybear.png"/>
+        <!-- </div> -->
+        <!-- <div class="item"> -->
+        <!-- Your image here -->
+        <img src="static/images/pot.png"/>
+        <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3">Attention Maps of Existing Methods</h2>
+      
+      <img src="static/images/attention_maps.png" alt="Multi-Stage Finetuning of AttnDreamBooth" class="blend-img-background center-image"/>
+    
+      <div class="level-set has-text-justified">
+        <p>
+          Textual Inversion and DreamBooth encounter distinct challenges when integrating the learned concept into novel prompts. For Textual Inversion, the generated images often excessively focus on the learned concept, overlooking other prompt tokens. To investigate this issue, we present the attention map visualization for different tokens. This visualization reveals an embedding misalignment issue in novel compositions containing the concept, leading to incorrect attention map allocations for other tokens. A typical example is shown where the attention map corresponding to the ``drawing'' token focuses on incorrect regions. This misalignment occurs because Textual Inversion tends to overfit the input embedding of the text encoder, responsible for managing the contextual understanding of the prompt. 
+        </p>
+        <br>
+        <p>
+          Conversely, images generated by DreamBooth sometimes focus solely on other prompt tokens, neglecting the learned concept. This occurs because DreamBooth uses a rare token for the new concept while keeping its textual embedding fixed, thereby leading to insufficient learning of the embedding alignment for the new concept.
+        </p>
+      </div>
+    </div>
+   </div>
+ </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3">Method Overview: Multi-Stage Finetuning</h2>
+      
+      <img src="static/images/framework.png" alt="Multi-Stage Finetuning of AttnDreamBooth" class="blend-img-background center-image"/>
+    
+      <div class="level-set has-text-justified">
+        <p>
+          We propose a method named AttnDreamBooth, which separates the learning processes of the embedding alignment, the attention map, and the subject identity. Specifically, our approach consists of three main training stages. First, we optimize the textual embedding to learn the embedding alignment while preventing the risk of overfitting, which results in a coarse attention map for the new concept. Next, we fine-tune the cross-attention layers of the U-Net to refine the attention map. Lastly, we fine-tune the entire U-Net to capture the subject identity. Note that the text encoder remains fixed throughout all training stages to preserve its prior knowledge of contextual understanding.
+        </p>
+        <br>
+        <p>
+          Furthermore, we introduce a cross-attention map regularization term to enhance the learning of the attention map. Throughout the three training stages, we use a consistent training prompt, ``a photo of a [V] [super-category]'', where [V] and [super-category] denote the tokens for the new concept and its super-category, respectively. Our attention map regularization term encourages similarity between the attention maps of the new concept and its super-category. 
+        </p>
+      </div>
+    </div>
+   </div>
+ </div>
+</section>
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
